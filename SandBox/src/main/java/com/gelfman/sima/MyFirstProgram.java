@@ -5,15 +5,19 @@ public class MyFirstProgram {
 	public static void main ( String[] args ) {
 
 		hello ( "World" );
-		hello( "User" );
+		hello ( "User" );
 
-		double l = 5;
-		System.out.println ( "The area of a square with side " + l + " = " + area ( l ) );
 
-		double a = 4;
-		double b = 5;
-		System.out.println ( "The area of a rectangle with sides " + a + " and " + "b" + " = " + area ( a,b ) );
+		Square s = new Square ( 5 );
+		System.out.println ( "The area of a square with side " + s.getL () + " = " + s.area () );
+		s.setL ( 10 );
+		System.out.println ( "The area of a square with side " + s.getL () + " = " + s.area () );
 
+		Rectangle r = new Rectangle ( 4, 6 );
+		System.out.println ( "The area of a rectangle with sides " + r.getA () + " and " + r.getB () + " = " + r.area () );
+		r.setA ( 8 );
+		r.setB ( 6 );
+		System.out.println ( "The area of a rectangle with sides " + r.getA () + " and " + r.getB () + " = " + r.area () );
 
 
 	}
@@ -21,14 +25,5 @@ public class MyFirstProgram {
 	public static void hello ( String somebody ) {
 		System.out.println ( "Hello, " + somebody + "!" );
 	}
-
-	public static double area(double l){
-		return l * l;
-	}
-
-	public static  double area(double a, double b){
-		return a * b;
-	}
-
 
 }
